@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Adjusted column sizes */
+            gap: 10px;
+        }
+        form label {
+            grid-column: span 2;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        form textarea {
+            grid-column: span 2;
+            resize: vertical;
+            height: 60px; /* Reduced height for textarea */
+        }
+        form button {
+            grid-column: span 2;
+            background-color: #c7c5c5; /* Dark background for better contrast */
+            color: #fff; /* White text for visibility */
+            border: none;
+            cursor: pointer;
+            padding: 15px; /* Added padding for better appearance */
+            font-size: 16px; /* Increased font size for better readability */
+        }
+        form button:hover {
+            background-color: #2e2e2e; /* Red background on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <form action="https://formspree.io/f/mwpeoowq" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
